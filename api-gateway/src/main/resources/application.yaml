@@ -1,0 +1,7 @@
+api:
+  authService: http://auth-service
+  authPort: 8081
+  chatService: http://chat-service
+  chatPort: 8082
+server:
+  port: 8080

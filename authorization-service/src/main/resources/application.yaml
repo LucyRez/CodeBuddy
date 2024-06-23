@@ -1,0 +1,31 @@
+spring:
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/changelog-master.yaml
+  datasource:
+    url: jdbc:postgresql://auth-db:5432/users-codebuddy
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+  mail:
+    host: "smtp.yandex.ru"
+    port: 465
+    username: "rezunikl@yandex.com"
+    password: "nybyxjiazoxjmdyd"
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+          auth: true
+          starttls:
+            enable: true
+jwt:
+  secret: 1yWXfkmuj7DEAzMKhpIeij2wW8vv8ULw/5aUz0ulj3o=
+  expiration: 90000000
+
+server:
+  port: 8081

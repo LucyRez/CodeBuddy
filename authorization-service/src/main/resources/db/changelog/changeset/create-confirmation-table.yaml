@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-confirmation
+      author: lucy
+      changes:
+        - createTable:
+            tableName: confirmation
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: code
+                  type: varchar(5000)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    nullable: false
